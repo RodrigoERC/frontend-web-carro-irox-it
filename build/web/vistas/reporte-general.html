@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tabla de Ventas</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="../services-js/service-venta.js"></script>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Carrito</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../vistas/reporte-general.html">Reporte General</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../vistas/reporte-ventas.html">Reporte de Ventas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../vistas/reporte-productos.html">Reporte Productos</a>
+                        </li>                    
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container mt-4">
+            <h1>Reporte General</h1>
+            <br>
+            <div class="row">
+                <div id="ventas-globales"></div>
+                <div id="articulo-vendido"></div>
+            </div><br>
+
+
+
+            <table class="table table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>ID Productos</th>
+                        <th>Título</th>                        
+                        <th>Existencias</th>
+                        <th>Estado</th>
+                        <th>Ventas por artículo</th>
+                        <th>Ingreso por artículo</th>   
+                        <th>Notificar</th>   
+                    </tr>
+                </thead>
+                <tbody id="tabla-ventas-general">
+
+                </tbody>
+            </table>
+
+            <div class="container mt-4" id="div-error">
+            </div>
+
+            <div class="container mt-4" id="div-notificacion">
+            </div>
+    </body>
+</html>
